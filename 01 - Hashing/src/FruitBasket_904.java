@@ -18,7 +18,7 @@ public class FruitBasket_904 {
 
             map.put(fruit, map.getOrDefault(fruit, 0) + 1);
 
-            if(map.size() > 2){
+            while(map.size() > 2){
                 int leftFruit = fruits[start];
                 map.put(leftFruit, map.get(leftFruit) - 1);
 

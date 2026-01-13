@@ -1,18 +1,17 @@
+import trees.Node;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
-import trees.TreeNode;
-public class BFS_102 {
 
-    public List<List<Integer>> levelOrder(TreeNode root) {
+public class NaryBFS_429 {
+    public List<List<Integer>> levelOrder(Node root) {
         List<List<Integer>> result = new ArrayList<>();
 
         if(root == null){
             return result;
         }
-
-        Queue<TreeNode> queue = new LinkedList<>();
+        Queue<Node> queue = new LinkedList<>();
         queue.offer(root);
 
         while(!queue.isEmpty()){
@@ -20,16 +19,14 @@ public class BFS_102 {
             List<Integer> currentLevel = new ArrayList<>(levelSize);
 
             for(int i = 0; i < levelSize; i++){
-                TreeNode currentNode = queue.poll();
+                Node currentNode = queue.poll();
                 currentLevel.add(currentNode.val);
 
-                if (currentNode.left != null) {
-                    queue.offer(currentNode.left);
-                }
-                if (currentNode.right != null) {
-                    queue.offer(currentNode.right);
+                for(int j = 0; j < currentNode.children.size(); j++){
+                    queue.offer(currentNode.children.get(j));
                 }
             }
+
             result.add(currentLevel);
         }
         return result;

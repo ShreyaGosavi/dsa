@@ -1,11 +1,11 @@
+import trees.TreeNode;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
-import trees.TreeNode;
-public class BFS_102 {
 
-    public List<List<Integer>> levelOrder(TreeNode root) {
+public class BFS2_107 {
+    public static List<List<Integer>> levelOrderBottom(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
 
         if(root == null){
@@ -23,14 +23,16 @@ public class BFS_102 {
                 TreeNode currentNode = queue.poll();
                 currentLevel.add(currentNode.val);
 
-                if (currentNode.left != null) {
+                if(currentNode.left != null){
                     queue.offer(currentNode.left);
                 }
-                if (currentNode.right != null) {
+
+                if(currentNode.right != null){
                     queue.offer(currentNode.right);
                 }
             }
-            result.add(currentLevel);
+
+            result.addFirst(currentLevel);
         }
         return result;
     }

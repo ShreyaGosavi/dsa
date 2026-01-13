@@ -1,12 +1,13 @@
+import trees.TreeNode;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
-import trees.TreeNode;
-public class BFS_102 {
 
-    public List<List<Integer>> levelOrder(TreeNode root) {
-        List<List<Integer>> result = new ArrayList<>();
+public class AverageLevels_637 {
+
+    public List<Double> averageOfLevels(TreeNode root) {
+        List<Double> result = new ArrayList<>();
 
         if(root == null){
             return result;
@@ -17,11 +18,11 @@ public class BFS_102 {
 
         while(!queue.isEmpty()){
             int levelSize = queue.size();
-            List<Integer> currentLevel = new ArrayList<>(levelSize);
+            double currentLevelSum = 0;
 
             for(int i = 0; i < levelSize; i++){
                 TreeNode currentNode = queue.poll();
-                currentLevel.add(currentNode.val);
+                currentLevelSum += currentNode.val;
 
                 if (currentNode.left != null) {
                     queue.offer(currentNode.left);
@@ -30,7 +31,7 @@ public class BFS_102 {
                     queue.offer(currentNode.right);
                 }
             }
-            result.add(currentLevel);
+            result.add(currentLevelSum/levelSize);
         }
         return result;
     }

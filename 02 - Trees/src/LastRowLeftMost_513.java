@@ -3,13 +3,12 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 import trees.TreeNode;
-public class BFS_102 {
-
-    public List<List<Integer>> levelOrder(TreeNode root) {
-        List<List<Integer>> result = new ArrayList<>();
+public class LastRowLeftMost_513 {
+    public int findBottomLeftValue(TreeNode root) {
+        int leftMost = -1;
 
         if(root == null){
-            return result;
+            return leftMost;
         }
 
         Queue<TreeNode> queue = new LinkedList<>();
@@ -17,11 +16,14 @@ public class BFS_102 {
 
         while(!queue.isEmpty()){
             int levelSize = queue.size();
-            List<Integer> currentLevel = new ArrayList<>(levelSize);
+
 
             for(int i = 0; i < levelSize; i++){
                 TreeNode currentNode = queue.poll();
-                currentLevel.add(currentNode.val);
+
+                if(i == 0){
+                    leftMost = currentNode.val;
+                }
 
                 if (currentNode.left != null) {
                     queue.offer(currentNode.left);
@@ -30,8 +32,7 @@ public class BFS_102 {
                     queue.offer(currentNode.right);
                 }
             }
-            result.add(currentLevel);
         }
-        return result;
+        return leftMost;
     }
 }

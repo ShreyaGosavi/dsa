@@ -1,12 +1,10 @@
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
 import trees.TreeNode;
-public class BFS_102 {
+import java.util.LinkedList;
+import java.util.Queue;
 
-    public List<List<Integer>> levelOrder(TreeNode root) {
-        List<List<Integer>> result = new ArrayList<>();
+public class MaxDepth_104 {
+    public int maxDepth(TreeNode root) {
+        int result = 0;
 
         if(root == null){
             return result;
@@ -17,11 +15,9 @@ public class BFS_102 {
 
         while(!queue.isEmpty()){
             int levelSize = queue.size();
-            List<Integer> currentLevel = new ArrayList<>(levelSize);
 
             for(int i = 0; i < levelSize; i++){
                 TreeNode currentNode = queue.poll();
-                currentLevel.add(currentNode.val);
 
                 if (currentNode.left != null) {
                     queue.offer(currentNode.left);
@@ -30,7 +26,7 @@ public class BFS_102 {
                     queue.offer(currentNode.right);
                 }
             }
-            result.add(currentLevel);
+            result++;
         }
         return result;
     }

@@ -4,54 +4,48 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class MaxWidth_662 {
-    public int widthOfBinaryTree(TreeNode root) {
+    private static class Pair {
+        TreeNode node;
+        long index;
 
-        if(root == null){
-            return 0;
+        Pair(TreeNode node, long index) {
+            this.node = node;
+            this.index = index;
         }
+    }
 
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.offer(root);
-        int nextwidth = 2;
-        int max = 0;
+    public int widthOfBinaryTree(TreeNode root) {
+        if(root == null) return 0;
+
+
+        Queue<Pair> queue = new LinkedList<>();
+        queue.offer(new Pair(root, 0L));
+
+        int maxWidth = 0;
 
         while(!queue.isEmpty()){
             int levelSize = queue.size();
-            int width = nextwidth;
+            long minNum = queue.peek().index;
 
-            TreeNode firstNode = null;
+            long first = 0;
+            long last = 0;
+
             for(int i = 0; i < levelSize; i++){
-                TreeNode currentNode = queue.poll();
+                Pair current = queue.poll();
+                long currentIndex = current.index - minNum;
 
-                if (currentNode.right != null) {
-                    queue.offer(currentNode.right);
-                    if(firstNode == null){
-                        firstNode = currentNode;
-                    }
-                }
-                else{
-                    if(firstNode == null){
-                        width -= 1;
-                    }
+                if(i == 0) first = currentIndex;
+                if(i == levelSize - 1) last = currentIndex;
 
+                if (current.node.left != null) {
+                    queue.offer(new Pair(current.node.left, 2 * currentIndex + 1));
                 }
-                if (currentNode.left != null) {
-                    queue.offer(currentNode.left);
-                    if(firstNode == null){
-                        firstNode = currentNode;
-                    }
+                if (current.node.right != null) {
+                    queue.offer(new Pair(current.node.right, 2 * currentIndex + 2));
                 }
-                else{
-                    if(firstNode == null){
-                        width -= 1;
-                    }
-
-                }
-
             }
-            max = Math.max(width, max);
-            nextwidth *= 2;
+            maxWidth = Math.max(maxWidth, (int)(last - first + 1));
         }
-        return max;
+        return maxWidth;
     }
 }

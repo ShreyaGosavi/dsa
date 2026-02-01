@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="05f46bbc-5cbe-45fd-a5de-6392bda164f5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/Desktop.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bubble.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Cyclic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DisappearedNumberInArray_448.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Insertion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Merge.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MergeInPlace.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MissingNumber_268.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Quick.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Selection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SortArray_912.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="38tEmRtvEsvrJO0lKuxkBW1rNHC" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Bubble.executor": "Run",
+    "Application.Cyclic.executor": "Run",
+    "Application.DisappearedNumberInArray_448.executor": "Debug",
+    "Application.Insertion.executor": "Run",
+    "Application.Merge.executor": "Run",
+    "Application.MergeInPlace.executor": "Run",
+    "Application.Quick.executor": "Run",
+    "Application.Selection.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "/Users/mac/Desktop/03 - Sorting/src/Main.java"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="05f46bbc-5cbe-45fd-a5de-6392bda164f5" name="Changes" comment="" />
+      <created>1769610627960</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1769610627960</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/DisappearedNumberInArray_448.java</url>
+          <line>4</line>
+          <properties class="DisappearedNumberInArray_448" method="findDisappearedNumbers">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
